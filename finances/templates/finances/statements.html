@@ -1,0 +1,7 @@
+{% load static %}
+
+<ul>
+{% for statement in statements_list %}
+    <li><a href="{% url 'finances:transactions' statement.id %}">{{ statement.year }} {{ statement.month }}</a></li>
+{% endfor %}
+</ul>

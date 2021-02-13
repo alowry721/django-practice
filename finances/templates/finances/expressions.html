@@ -1,0 +1,13 @@
+<h2>{{ category.name }} Expressions</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Regex</th>
+    </tr>
+{% for expression in expressions_list %}
+    <tr>
+        <td>{{ expression.name }}</td>
+        <td>{{ expression.regex }}</td>
+    </tr>
+{% endfor %}
+</table>

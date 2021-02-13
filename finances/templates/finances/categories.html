@@ -1,0 +1,13 @@
+{% load static %}
+
+<ul>
+{% for category in categories_list %}
+    <li><a href="{% url 'finances:expressions' category.id %}">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
+
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
